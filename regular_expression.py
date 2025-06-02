@@ -21,5 +21,11 @@ only_emails = re.findall(r"[^\s@]+@kingbilly\.xyz", extracted_emails)
 # Join the emails into a single string separated by newlines
 cleaned_emails = "\n".join(only_emails)
 
+
+
 print(cleaned_emails)
+
+# Write the cleaned emails to a new file
+with open('cleaned_emails.txt', 'w') as file:
+    file.write(cleaned_emails)
 
